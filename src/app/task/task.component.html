@@ -1,4 +1,4 @@
 <li>
   <button (click)="removeTask()" class="task__remove-button">X</button>
-  <span (click)="editTask()">{{ task.body }}</span>
+  <a routerLink="view/{{ task.id }}">{{ task.body }}</a>
 </li>
