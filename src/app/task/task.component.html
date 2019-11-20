@@ -1,4 +1,4 @@
 <li>
   <button (click)="removeTask()" class="task__remove-button">X</button>
-  <span>{{ task.body }}</span>
+  <span (click)="editTask()">{{ task.body }}</span>
 </li>

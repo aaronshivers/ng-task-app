@@ -15,8 +15,10 @@ export class TaskComponent implements OnInit {
   ngOnInit() {
   }
 
-  // todo: get this working
-  private removeTask() {
+  removeTask() {
     this.tasksService.removeTask(this.task.id);
+  }
+
+  editTask() {
   }
 }
