@@ -1,3 +1,3 @@
-<ul *ngFor="let task of tasks">
+<ul *ngFor="let task of tasksService.getTasks()">
   <app-task [task]="task"></app-task>
 </ul>

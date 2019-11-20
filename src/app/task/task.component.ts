@@ -8,7 +8,7 @@ import { Task } from '../task';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent implements OnInit {
-  @Input() task: Task;
+  @Input() private task: Task;
 
   constructor(private tasksService: TasksService) { }
 
@@ -16,7 +16,7 @@ export class TaskComponent implements OnInit {
   }
 
   // todo: get this working
-  removeTask() {
-    // this.tasksService.removeTask(this.task.id);
+  private removeTask() {
+    this.tasksService.removeTask(this.task.id);
   }
 }

@@ -1,3 +1,5 @@
+import { v4 as uuid } from 'uuid';
+
 import { Injectable } from '@angular/core';
 import { TASKS } from './tasks';
 import { Task } from './task';
@@ -6,7 +8,7 @@ import { Task } from './task';
   providedIn: 'root',
 })
 export class TasksService {
-  tasks = TASKS;
+  tasks: Task[] = TASKS;
 
   constructor() { }
 
@@ -14,17 +16,15 @@ export class TasksService {
     return this.tasks;
   }
 
-  // todo: figure out what to use for the id
   addTask(value: string) {
-    console.log(value);
-    // const task = new Task(uuid(), value);
-    this.tasks.push({ id: 33, body: value });
+    const task = new Task(uuid(), value);
+    this.tasks.push(task);
   }
 
-  // todo: add data type
   // todo: figure out why removeTask() doesn't work
-  // removeTask(id): void {
-  //   console.log(id);
-  //   this.tasks = this.tasks.filter(task => task.id !== id);
-  // }
+  removeTask(id: string): void {
+    console.log(this.tasks);
+    this.tasks = this.tasks.filter(task => task.id !== id);
+    console.log(this.tasks);
+  }
 }
