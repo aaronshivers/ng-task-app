@@ -1,18 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-
 :root {
-  --primary-color: #296bb9;
-}
+  --primary-color: #296bb9; }
 
 * {
   margin: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   color: var(--primary-color);
   font-weight: bolder;
-  font-family: "Droid Sans", sans-serif;
-}
+  font-family: "Droid Sans", sans-serif; }
 
-
+/*# sourceMappingURL=styles.css.map */

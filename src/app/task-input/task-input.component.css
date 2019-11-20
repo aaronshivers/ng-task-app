@@ -1,0 +1,7 @@
+.task__input {
+  border: none;
+  border-bottom: 3px solid var(--primary-color);
+  width: 100%;
+  padding: 1rem; }
+
+/*# sourceMappingURL=task-input.component.css.map */
