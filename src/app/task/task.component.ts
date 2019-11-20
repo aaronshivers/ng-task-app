@@ -8,7 +8,7 @@ import { Task } from '../task';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent implements OnInit {
-  @Input() private task: Task;
+  @Input() task: Task;
 
   constructor(private tasksService: TasksService) { }
 

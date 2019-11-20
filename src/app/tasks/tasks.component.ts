@@ -11,6 +11,6 @@ import { TasksService } from '../tasks.service';
 export class TasksComponent {
   tasks: Task[];
 
-  constructor(private tasksService: TasksService) {
+  constructor(public tasksService: TasksService) {
   }
 }
