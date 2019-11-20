@@ -1,6 +1,6 @@
 <input
   #taskInput
-  (keyup.enter)="addTask(taskInput.value)"
+  (keyup.enter)="addTask(taskInput.value); taskInput.value = ''"
   class="task__input"
   placeholder="new task..."
   type="text">
