@@ -7,13 +7,17 @@ import { TasksComponent } from './tasks/tasks.component';
 import { TaskInputComponent } from './task-input/task-input.component';
 import { TaskComponent } from './task/task.component';
 import { FormsModule } from '@angular/forms';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
     TaskInputComponent,
-    TaskComponent
+    TaskComponent,
+    TaskDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
