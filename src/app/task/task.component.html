@@ -1,1 +1,4 @@
-<li>{{ task.body }}</li>
+<li>
+  <button (click)="removeTask()" class="task__remove-button">X</button>
+  <span>{{ task.body }}</span>
+</li>
