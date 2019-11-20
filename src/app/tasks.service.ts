@@ -13,4 +13,10 @@ export class TasksService {
   getTasks(): Task[] {
     return this.tasks;
   }
+
+  addTask(value: string) {
+    console.log(value);
+    // const task = new Task(uuid(), value);
+    this.tasks.push({id: 33, body: value});
+  }
 }
