@@ -10,7 +10,6 @@ import { TaskService } from '../task.service';
   styleUrls: ['./task-detail.component.scss']
 })
 export class TaskDetailComponent implements OnInit {
-  tasks: Task[] = [];
   task: Task;
 
   constructor(
@@ -25,10 +24,7 @@ export class TaskDetailComponent implements OnInit {
 
   getTask(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    // console.log(id);
-    // this.taskService.getTasks().subscribe(tasks => this.tasks = tasks);
     this.task = this.taskService.getTask(id);
-    // console.log(this.task);
   }
 
   goBack(): void {

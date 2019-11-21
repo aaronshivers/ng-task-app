@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TasksService } from '../tasks.service';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-task-input',
@@ -8,12 +8,12 @@ import { TasksService } from '../tasks.service';
 })
 export class TaskInputComponent implements OnInit {
 
-  constructor(private tasksService: TasksService) { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
   }
 
   addTask(value: string): void {
-    this.tasksService.addTask(value);
+    this.taskService.addTask(value);
   }
 }

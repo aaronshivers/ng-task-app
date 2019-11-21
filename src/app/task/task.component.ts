@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TasksService } from '../tasks.service';
+import { TaskService } from '../task.service';
 import { Task } from '../task';
 
 @Component({
@@ -10,15 +10,12 @@ import { Task } from '../task';
 export class TaskComponent implements OnInit {
   @Input() task: Task;
 
-  constructor(private tasksService: TasksService) { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
   }
 
   removeTask() {
-    this.tasksService.removeTask(this.task.id);
-  }
-
-  editTask() {
+    this.taskService.removeTask(this.task.id);
   }
 }
