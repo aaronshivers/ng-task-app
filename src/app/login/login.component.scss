@@ -1,0 +1,21 @@
+.form__container {
+  margin-top: 1rem;
+}
+
+input {
+  border: 3px solid var(--primary-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  width: available;
+  width: -moz-available;
+
+}
+
+button {
+  border: 3px solid var(--primary-color);
+  background-color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  padding: .75rem;
+  color: inherit;
+}
