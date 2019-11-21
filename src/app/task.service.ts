@@ -21,10 +21,11 @@ export class TaskService {
     this.tasks.push(task);
   }
 
-  // todo: figure out why removeTask() doesn't work
   removeTask(id: string): void {
-    console.log(this.tasks);
     this.tasks = this.tasks.filter(task => task.id !== id);
-    console.log(this.tasks);
+  }
+
+  getTask(id: string): Task {
+    return this.tasks.filter(task => task.id === id)[0];
   }
 }

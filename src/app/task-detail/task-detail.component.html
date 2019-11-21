@@ -1,5 +1,7 @@
 <input
-  #taskInput
+  *ngIf="task"
+  [(ngModel)]="task.body"
+  value="{{ task.body }}"
   class="task-detail__input"
   placeholder="updated task..."
   maxlength="25"
