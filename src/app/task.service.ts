@@ -27,4 +27,8 @@ export class TaskService {
     this.tasks = this.tasks.filter(task => task.id !== id);
     console.log(this.tasks);
   }
+
+  getTask(id: string): Task {
+    return this.tasks.filter(task => task.id === id)[0];
+  }
 }
