@@ -1,3 +1,7 @@
+<h2>users</h2>
+
+<hr>
+
 <ul *ngFor="let user of users">
   <li>
     <a routerLink="/users/{{ user.id }}/view/">{{ user.username }}</a>

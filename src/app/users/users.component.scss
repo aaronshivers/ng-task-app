@@ -1,3 +1,14 @@
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+hr {
+  width: 75%;
+  margin: .5rem auto;
+  border-color: var(--primary-color);
+}
+
 li {
   list-style: none;
   display: flex;
