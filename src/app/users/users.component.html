@@ -1,5 +1,5 @@
 <ul *ngFor="let user of users">
   <li>
-    <a routerLink="/view/{{ user.id }}">{{ user.username }}</a>
+    <a routerLink="/users/{{ user.id }}/view/">{{ user.username }}</a>
   </li>
 </ul>

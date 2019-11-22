@@ -25,7 +25,6 @@ export class UsersComponent implements OnInit {
       .subscribe(response => {
         this.users = response;
       });
-    console.log('hi', this.users);
   }
 
 }
