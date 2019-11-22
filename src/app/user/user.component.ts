@@ -34,8 +34,9 @@ export class UserComponent implements OnInit {
   }
 
   deleteUser(id: number): void {
-    this.goBack();
     this.userService.deleteUser(id).subscribe();
+    // todo: get the users list to automatically refresh after deleting a user
+    setTimeout(() => this.goBack(), 1000);
   }
 
   goBack() {

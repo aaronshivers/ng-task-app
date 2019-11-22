@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
+import { NewUserComponent } from './new-user/new-user.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserComponent } from './user/user.component';
     LoginComponent,
     UsersComponent,
     UserComponent,
+    NewUserComponent,
   ],
   imports: [
     BrowserModule,
