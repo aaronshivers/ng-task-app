@@ -17,6 +17,7 @@ body {
 }
 
 .button--regular {
+  text-transform: uppercase;
   border: 3px solid var(--primary-color);
   background-color: inherit;
   color: inherit;

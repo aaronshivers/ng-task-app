@@ -9,6 +9,7 @@
 </div>
 
 <div class="button__container">
-  <button class="button--regular">delete</button>
+  <button (click)="goBack()" class="button--regular">back</button>
+  <button (click)="deleteUser(user.id)" class="button--regular">delete</button>
   <button class="button--regular">update</button>
 </div>
