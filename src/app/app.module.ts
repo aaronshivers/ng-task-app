@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     TaskComponent,
     TaskDetailComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

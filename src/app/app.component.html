@@ -2,6 +2,8 @@
 
   <h1 class="tasks__title">{{ title | uppercase }}</h1>
 
+  <hr>
+
   <div *ngIf="!isLoggedIn; then displayApp else displayLogin"></div>
 
   <ng-template #displayLogin>

@@ -1,3 +1,5 @@
+<app-task-input class="tasks__input"></app-task-input>
+
 <ul *ngFor="let task of taskService.getTasks()">
   <app-task [task]="task"></app-task>
 </ul>
