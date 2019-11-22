@@ -7,3 +7,9 @@
   <p>{{ user.created_at }}</p>
   <p>{{ user.updated_at }}</p>
 </div>
+
+<div class="button__container">
+  <button (click)="goBack()" class="button--regular">back</button>
+  <button (click)="deleteUser(user.id)" class="button--regular">delete</button>
+  <button class="button--regular">update</button>
+</div>

@@ -1,5 +1,15 @@
-<ul *ngFor="let user of users">
-  <li>
-    <a routerLink="/users/{{ user.id }}/view/">{{ user.username }}</a>
-  </li>
-</ul>
+<div class="users__container">
+
+  <h2>users</h2>
+
+  <a routerLink="/users/new" role="button" class="users__button" >new user</a>
+
+  <hr>
+
+  <ul *ngFor="let user of users">
+    <li>
+      <a routerLink="/users/{{ user.id }}/view/">{{ user.username }}</a>
+    </li>
+  </ul>
+
+</div>
