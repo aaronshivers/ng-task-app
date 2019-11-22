@@ -2,7 +2,7 @@
 
   <h1 class="tasks__title">{{ title | uppercase }}</h1>
 
-  <div *ngIf="isLoggedIn; then displayApp else displayLogin"></div>
+  <div *ngIf="!isLoggedIn; then displayApp else displayLogin"></div>
 
   <ng-template #displayLogin>
     <app-login></app-login>
