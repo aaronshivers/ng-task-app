@@ -1,11 +1,22 @@
-.tasks__container {
-  margin: 1rem auto;
+.app__container {
+  margin: 0 auto;
+  max-width: 480px;
+  min-height: 100vh;
   padding: 1rem;
-  width: 500px;
   border: 10px solid var(--primary-color); }
 
-.tasks__title {
-  font-size: 5rem;
+.app__title {
+  font-size: 3rem;
   text-align: center; }
+
+hr {
+  border: 2px solid var(--primary-color);
+  margin: 1rem; }
+
+@media (min-width: 768px) {
+  .tasks__container {
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 480px; } }
 
 /*# sourceMappingURL=app.component.css.map */

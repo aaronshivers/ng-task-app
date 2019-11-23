@@ -1,14 +1,19 @@
-hr {
-  border: 2px solid var(--primary-color);
-  margin: 1rem;
-}
-
-.tasks__container {
+.app__container {
   margin: 0 auto;
   max-width: 480px;
   min-height: 100vh;
   padding: 1rem;
   border: 10px solid var(--primary-color);
+}
+
+.app__title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+hr {
+  border: 2px solid var(--primary-color);
+  margin: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -17,9 +22,4 @@ hr {
     padding: 1rem;
     max-width: 480px;
   }
-}
-
-.tasks__title {
-  font-size: 3rem;
-  text-align: center;
 }

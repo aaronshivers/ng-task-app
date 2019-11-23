@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap");
 :root {
   --primary-color: #296bb9;
   --secondary-color: #b9172d; }
@@ -9,7 +10,18 @@
 
 body {
   color: var(--primary-color);
-  font-weight: bolder;
-  font-family: "Droid Sans", sans-serif; }
+  font-weight: 700;
+  font-family: 'Ubuntu', sans-serif; }
+
+.button--regular {
+  text-transform: uppercase;
+  border: 3px solid var(--primary-color);
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  padding: .5rem;
+  margin-top: 1rem;
+  font-weight: inherit;
+  cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,13 @@
 <div class="users__container">
 
-  <h2>users</h2>
+  <div class="button__container">
+    <a routerLink="/users/new">
+      <button class="button--regular">new user</button>
+    </a>
+    <button class="button--regular" (click)="goBack()">back</button>
+  </div>
 
-  <a routerLink="/users/new" role="button" class="users__button" >new user</a>
+  <h2>users</h2>
 
   <hr>
 
