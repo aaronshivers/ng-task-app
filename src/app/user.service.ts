@@ -24,4 +24,11 @@ export class UserService {
   deleteUser(id: number): Observable<{}> {
     return this.http.delete(`${ this.usersUrl }/${ id }`);
   }
+
+  // tslint:disable-next-line:variable-name
+  addUser({ username, firstName: first_name, lastName: last_name, email, }: User): Observable<{}> {
+    return this
+      .http
+      .post(`${ this.usersUrl }`, { username, first_name, last_name, email, });
+  }
 }

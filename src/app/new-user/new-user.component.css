@@ -8,9 +8,9 @@ input {
   outline: none;
   font-size: 1rem;
   font-weight: bolder;
-  margin-top: 1rem;
-}
+  margin-top: 1rem; }
 
 ::placeholder {
-  color: inherit;
-}
+  color: inherit; }
+
+/*# sourceMappingURL=new-user.component.css.map */

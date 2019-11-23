@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-new-user',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-user.component.scss']
 })
 export class NewUserComponent implements OnInit {
+  user: User;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
+  addUser(user: User): void {
+    this
+      .userService
+      .addUser(user)
+      .subscribe();
+  }
+
+  onSubmit(value: User): void {
+    this.addUser(value);
+  }
 }
