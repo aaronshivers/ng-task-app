@@ -11,9 +11,10 @@ import { NewUserComponent } from './new-user/new-user.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'tasks', component: TasksComponent },
   { path: 'users/:id/view', component: UserComponent },
-  { path: 'users/new', component: NewUserComponent }
+  { path: 'users/new', component: NewUserComponent },
+  { path: 'tasks', component: TasksComponent },
+  { path: 'tasks/:id/view', component: TaskDetailComponent },
 ];
 
 @NgModule({
