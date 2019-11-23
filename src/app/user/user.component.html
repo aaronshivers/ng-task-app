@@ -1,13 +1,19 @@
 <div *ngIf="user">
-  <p>{{ user.id }}</p>
-  <p>{{ user.username }}</p>
-  <p>{{ user.firstName }}</p>
-  <p>{{ user.lastName }}</p>
-  <p>{{ user.email }}</p>
-</div>
+  <ul>
+    <li>{{ user.id }}</li>
+    <li>{{ user.username }}</li>
+    <li>{{ user.email }}</li>
+    <li>{{ user.first_name }}</li>
+    <li>{{ user.last_name }}</li>
+  </ul>
 
-<div class="button__container">
-  <button (click)="goBack()" class="button--regular">back</button>
-  <button (click)="deleteUser(user.id)" class="button--regular">delete</button>
-  <button class="button--regular">update</button>
+  <div class="button__container">
+    <button (click)="goBack()" class="button--regular">back</button>
+    <button (click)="deleteUser(user.id)" class="button--regular">delete
+    </button>
+    <a routerLink="/users/{{ user.id }}/update">
+      <button class="button--regular">update</button>
+    </a>
+  </div>
+
 </div>

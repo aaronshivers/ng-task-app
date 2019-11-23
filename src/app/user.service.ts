@@ -31,4 +31,8 @@ export class UserService {
       .http
       .post(`${ this.usersUrl }`, { username, first_name, last_name, email, });
   }
+
+  updateUser(id: number, updatedUser: User): Observable<{}> {
+    return this.http.patch(`${this.usersUrl}/${id}`, updatedUser);
+  }
 }
