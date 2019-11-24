@@ -14,6 +14,13 @@ html {
   font-weight: 700;
   font-family: 'Ubuntu', sans-serif; }
 
+body {
+  margin: 0 auto;
+  max-width: 768px; }
+
+hr {
+  border: 2px solid var(--primary-color); }
+
 button {
   border: 5px solid var(--primary-color);
   padding: 1rem;

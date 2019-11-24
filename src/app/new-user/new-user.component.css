@@ -1,3 +1,7 @@
+h2 {
+  text-align: center;
+  text-transform: uppercase; }
+
 input {
   border: none;
   border-bottom: 3px solid var(--primary-color);
@@ -12,5 +16,8 @@ input {
 
 ::placeholder {
   color: inherit; }
+
+label {
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=new-user.component.css.map */
