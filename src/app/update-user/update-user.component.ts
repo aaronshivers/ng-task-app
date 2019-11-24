@@ -30,7 +30,11 @@ export class UpdateUserComponent implements OnInit {
     this
       .userService
       .getUser(this.id)
-      .subscribe(response => this.user = response);
+      // @ts-ignore
+      // tslint:disable-next-line:no-shadowed-variable
+      .subscribe(({ id, username, email, first_name: firstName, last_name: lastName }) => {
+        this.user = { id, username, email, firstName, lastName };
+      });
   }
 
   updateUser(): void {
