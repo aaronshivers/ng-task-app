@@ -30,4 +30,12 @@ export class TaskDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  updateTask(value: string): void {
+
+  }
+
+  onSubmit(value: string): void {
+    this.updateTask(value);
+  }
 }

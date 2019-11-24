@@ -36,4 +36,21 @@ button {
   cursor: pointer;
   margin: 1rem 0; }
 
+button:hover {
+  background-color: #bed5f0; }
+
+a, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit; }
+
+a:hover {
+  color: #0d233c; }
+
+ul {
+  padding: 0; }
+
+::placeholder {
+  color: #94bae7; }
+
 /*# sourceMappingURL=styles.css.map */

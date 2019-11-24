@@ -1,8 +1,12 @@
 li {
-  list-style: none;
-  margin: 1rem;
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
+
+.remove {
+  color: var(--secondary-color);
+  cursor: pointer; }
+
+.remove:hover {
+  color: #5e0c17; }
 
 /*# sourceMappingURL=task.component.css.map */

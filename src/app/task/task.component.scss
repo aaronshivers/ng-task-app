@@ -8,11 +8,6 @@ li {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:visited {
-  color: inherit;
+.remove:hover {
+  color: darken(#B9172D, 20);
 }

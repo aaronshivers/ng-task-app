@@ -1,8 +1,15 @@
-<h2>New User</h2>
-
-<hr>
-
 <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+
+  <div>
+    <button type="submit">Submit</button>
+    <button (click)="goBack()">back</button>
+  </div>
+
+  <hr>
+
+  <h2>New User</h2>
+
+  <hr>
 
   <div #userData="ngModelGroup" ngModelGroup="user"></div>
 
@@ -52,11 +59,6 @@
       placeholder="last name..."
       type="text">
     <label for="lastName">last Name</label>
-  </div>
-
-  <div>
-    <button type="submit">Submit</button>
-    <button (click)="goBack()">back</button>
   </div>
 
 </form>

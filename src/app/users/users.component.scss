@@ -3,19 +3,9 @@ h2 {
   text-align: center;
 }
 
-ul {
-  padding: 0;
-}
-
 li {
   list-style: none;
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
-}
-
-a, a:visited {
-  text-decoration: none;
-  cursor: pointer;
-  color: inherit;
 }

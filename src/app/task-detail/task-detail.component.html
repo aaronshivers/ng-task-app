@@ -1,3 +1,14 @@
+<div>
+  <button (click)="goBack()">update</button>
+  <button (click)="goBack()">Back</button>
+</div>
+
+<hr>
+
+<h2>update task</h2>
+
+<hr>
+
 <input
   *ngIf="task"
   [(ngModel)]="task.body"
@@ -6,4 +17,4 @@
   placeholder="updated task..."
   maxlength="25"
   type="text">
-<button class="button--regular" (click)="goBack()">Go Back</button>
+

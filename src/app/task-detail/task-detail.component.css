@@ -7,10 +7,9 @@ input {
   text-align: center;
   outline: none;
   font-size: 1rem;
-  font-weight: bolder;
-  margin-top: 1rem;
-}
+  font-weight: bolder; }
 
 label {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=task-detail.component.css.map */

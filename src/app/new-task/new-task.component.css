@@ -8,9 +8,9 @@ input {
   outline: none;
   font-size: 1rem;
   font-weight: bolder;
-  margin-top: 1rem;
-}
+  margin-top: 1rem; }
 
 label {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=new-task.component.css.map */

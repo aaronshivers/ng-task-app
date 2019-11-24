@@ -43,3 +43,25 @@ button {
   cursor: pointer;
   margin: 1rem 0;
 }
+
+button:hover {
+  background-color: lighten(#296BB9, 40);
+}
+
+a, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a:hover {
+  color: darken(#296BB9, 30);
+}
+
+ul {
+  padding: 0;
+}
+
+::placeholder {
+  color: lighten(#296BB9, 30);
+}

@@ -1,17 +1,19 @@
-<h2>New Task</h2>
-
-<hr>
-
 <form (ngSubmit)="onSubmit(f.value.body)" #f="ngForm">
-
-  <div>
-    <input ngModel #body="ngModel" name="body" type="text" placeholder="new task..." required id="newTask">
-    <label for="newTask">new task</label>
-  </div>
 
   <div>
     <button type="submit">add task</button>
     <button (click)="goBack()">back</button>
+  </div>
+
+  <hr>
+
+  <h2>New Task</h2>
+
+  <hr>
+
+  <div>
+    <input ngModel #body="ngModel" name="body" type="text" placeholder="new task..." required id="newTask">
+    <label for="newTask">new task</label>
   </div>
 
 </form>

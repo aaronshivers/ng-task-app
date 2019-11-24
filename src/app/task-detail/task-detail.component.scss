@@ -1,4 +1,4 @@
-.task-detail__input {
+input {
   border: none;
   border-bottom: 3px solid var(--primary-color);
   width: 100%;
@@ -8,4 +8,8 @@
   outline: none;
   font-size: 1rem;
   font-weight: bolder;
+}
+
+label {
+  text-transform: uppercase;
 }
