@@ -1,8 +1,11 @@
-.button__container {
-  text-align: center;
-  margin-top: 3rem;
+table {
+  margin: 0 auto;
 }
 
-button {
-  margin: .5rem;
+td {
+  padding: .5rem;
+}
+
+td:first-of-type {
+  text-align: right;
 }
