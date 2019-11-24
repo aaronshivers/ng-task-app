@@ -1,22 +1,9 @@
-.button__container {
-  text-align: center;
-  margin-top: 1rem; }
-
 h2 {
   text-transform: uppercase;
   text-align: center; }
 
-button {
-  font-size: 1.5rem;
-  margin: 1rem;
-  border: 5px solid var(--primary-color);
-  text-transform: uppercase;
-  padding: 1rem; }
-
 hr {
-  width: 100%;
-  margin: .5rem auto;
-  border-color: var(--primary-color); }
+  border: 2px solid var(--primary-color); }
 
 li {
   list-style: none;

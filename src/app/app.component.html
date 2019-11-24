@@ -1,8 +1,6 @@
 <div class="app__container">
 
-  <h1 class="app__title">{{ title | uppercase }}</h1>
-
-  <hr>
+  <app-title></app-title>
 
   <div *ngIf="!isLoggedIn; then displayApp else displayLogin"></div>
 

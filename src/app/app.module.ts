@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     UserComponent,
     NewUserComponent,
     UpdateUserComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

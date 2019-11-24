@@ -41,7 +41,7 @@ export class UserComponent implements OnInit {
     setTimeout(() => this.goBack(), 1000);
   }
 
-  goBack() {
+  goBack(): void {
     this.location.back();
   }
 }

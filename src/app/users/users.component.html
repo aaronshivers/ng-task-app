@@ -1,20 +1,18 @@
-<div class="users__container">
-
-  <div class="button__container">
-    <a routerLink="/users/new">
-      <button class="button--regular">new user</button>
-    </a>
-    <button class="button--regular" (click)="goBack()">back</button>
-  </div>
-
-  <h2>users</h2>
-
-  <hr>
-
-  <ul *ngFor="let user of users">
-    <li>
-      <a routerLink="/users/{{ user.id }}/view/">{{ user.username }}</a>
-    </li>
-  </ul>
-
+<div>
+  <a routerLink="/users/new">
+    <button>new user</button>
+  </a>
+  <button (click)="goBack()">back</button>
 </div>
+
+<hr>
+
+<h2>users</h2>
+
+<hr>
+
+<ul *ngFor="let user of users">
+  <li>
+    <a routerLink="/users/{{ user.id }}/view/">{{ user.username }}</a>
+  </li>
+</ul>
