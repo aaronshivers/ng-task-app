@@ -37,7 +37,14 @@ export class UserService {
       );
   }
 
-  updateUser(id: number, updatedUser: User): Observable<{}> {
-    return this.http.patch(`${ this.usersUrl }/${ id }`, updatedUser);
+  updateUser(
+    id: number,
+    // tslint:disable-next-line:variable-name
+    { username, firstName: first_name, lastName: last_name, email }: User,
+  ): Observable<{}> {
+    return this.http.patch(
+      `${ this.usersUrl }/${ id }`,
+      { username, first_name, last_name, email },
+    );
   }
 }
