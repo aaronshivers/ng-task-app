@@ -25,14 +25,19 @@ export class UserService {
     return this.http.delete(`${ this.usersUrl }/${ id }`);
   }
 
-  // tslint:disable-next-line:variable-name
-  addUser({ username, firstName: first_name, lastName: last_name, email, }: User): Observable<{}> {
+  addUser(
+    // tslint:disable-next-line:variable-name
+    { username, firstName: first_name, lastName: last_name, email }: User,
+  ): Observable<{}> {
     return this
       .http
-      .post(`${ this.usersUrl }`, { username, first_name, last_name, email, });
+      .post(
+        `${ this.usersUrl }`,
+        { username, first_name, last_name, email },
+      );
   }
 
   updateUser(id: number, updatedUser: User): Observable<{}> {
-    return this.http.patch(`${this.usersUrl}/${id}`, updatedUser);
+    return this.http.patch(`${ this.usersUrl }/${ id }`, updatedUser);
   }
 }
