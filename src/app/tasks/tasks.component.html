@@ -1,4 +1,15 @@
-<app-task-input class="tasks__input"></app-task-input>
+<div>
+  <a routerLink="/tasks/new">
+    <button>new task</button>
+  </a>
+  <button (click)="goBack()">back</button>
+</div>
+
+<hr>
+
+<h2>tasks</h2>
+
+<hr>
 
 <ul *ngFor="let task of taskService.getTasks()">
   <app-task [task]="task"></app-task>

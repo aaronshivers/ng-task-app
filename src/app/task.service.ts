@@ -16,7 +16,7 @@ export class TaskService {
     return this.tasks;
   }
 
-  addTask(value: string) {
+  addTask(value: string): void {
     const task = new Task(uuid(), value);
     this.tasks.push(task);
   }

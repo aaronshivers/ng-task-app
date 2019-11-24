@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { TaskInputComponent } from './task-input/task-input.component';
 import { TaskComponent } from './task/task.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
@@ -16,12 +15,12 @@ import { UserComponent } from './user/user.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { TitleComponent } from './title/title.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    TaskInputComponent,
     TaskComponent,
     TaskDetailComponent,
     HomeComponent,
@@ -31,6 +30,7 @@ import { TitleComponent } from './title/title.component';
     NewUserComponent,
     UpdateUserComponent,
     TitleComponent,
+    NewTaskComponent,
   ],
   imports: [
     BrowserModule,

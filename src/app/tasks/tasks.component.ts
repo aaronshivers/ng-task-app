@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { Task } from '../task';
 import { TaskService } from '../task.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-tasks',
@@ -11,6 +12,10 @@ import { TaskService } from '../task.service';
 export class TasksComponent {
   tasks: Task[];
 
-  constructor(public taskService: TaskService) {
+  constructor(public taskService: TaskService, private location: Location) {
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }
