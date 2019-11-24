@@ -1,57 +1,25 @@
-<form
-  (ngSubmit)="onSubmit(updateUserForm.value)"
-  #updateUserForm="ngForm">
-  <div ngModelGroup="user" #user="ngModelGroup">
-    <div class="form-group">
-      <label for="username">username</label>
-      <input
-        ngModel
-        name="username"
-        #username="ngModel"
-        class="form-control"
-        id="username"
-        required
-        type="text">
-    </div>
+<div *ngIf="user">
 
-      <div class="form-group">
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div ngModelGroup="userData" #userData="ngModelGroup">
+      <div>
+        <label for="username">username</label>
+        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+      </div>
+      <div>
         <label for="email">email</label>
-        <input
-          ngModel
-          #email="ngModel"
-          class="form-control"
-          id="email"
-          name="email"
-          type="email">
+        <input type="text" id="email" [(ngModel)]="user.email" name="email" required>
       </div>
-
-      <div class="form-group">
+      <div>
         <label for="firstName">firstName</label>
-        <input
-          ngModel
-          #firstName="ngModel"
-          class="form-control"
-          id="firstName"
-          name="firstName"
-          type="text">
+        <input type="text" id="firstName" [(ngModel)]="user.first_name" name="username" required>
       </div>
-
-      <div class="form-group">
+      <div>
         <label for="lastName">lastName</label>
-        <input
-          ngModel
-          #lastName="ngModel"
-          class="form-control"
-          id="lastName"
-          name="lastName"
-          type="text">
+        <input type="text" id="lastName" [(ngModel)]="user.last_name" name="lastName" required>
       </div>
+    </div>
+    <button type="submit">update</button>
+  </form>
 
-    <button class="btn btn-success" type="submit">Submit</button>
-  </div>
-</form>
-
-<div class="button__container">
-  <button (click)="goBack()" class="button--regular">back</button>
-  <button class="button--regular">update</button>
 </div>

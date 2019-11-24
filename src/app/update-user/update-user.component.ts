@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../user';
 import { Location } from '@angular/common';
 import { UserService } from '../user.service';
 import { ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-update-user',
@@ -10,9 +11,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: [ './update-user.component.scss' ],
 })
 export class UpdateUserComponent implements OnInit {
+  @ViewChild('f', { static: false }) updateUserForm: NgForm;
   user: User;
   id: number = +this.route.snapshot.paramMap.get('id');
-
 
   constructor(
     private location: Location,
@@ -32,13 +33,13 @@ export class UpdateUserComponent implements OnInit {
       .subscribe(response => this.user = response);
   }
 
-  updateUser(value: User): void {
-    this.userService.updateUser(this.id, value).subscribe();
+  updateUser(): void {
+    this.userService.updateUser(this.id, this.user).subscribe();
   }
 
-  onSubmit(value: User): void {
-    console.log(value);
-    this.updateUser(value);
+  onSubmit(): void {
+    this.updateUser();
+    setTimeout(() => this.goBack(), 1000);
   }
 
   goBack(): void {
