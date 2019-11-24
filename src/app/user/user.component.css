@@ -1,0 +1,10 @@
+table {
+  margin: 0 auto; }
+
+td {
+  padding: .5rem; }
+
+td:first-of-type {
+  text-align: right; }
+
+/*# sourceMappingURL=user.component.css.map */

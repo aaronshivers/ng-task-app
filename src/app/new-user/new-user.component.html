@@ -1,61 +1,62 @@
-<div class="container">
-  <h2>New User</h2>
-  <hr>
-  <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
-    <div ngModelGroup="user" #user="ngModelGroup"></div>
-    <div class="form-group">
-      <input
-          ngModel
-          name="username"
-          #username="ngModel"
-          class="form-control"
-          id="username"
-          required
-          placeholder="username..."
-          type="text">
-      <label for="username">username</label>
-    </div>
+<h2>New User</h2>
 
-    <div class="form-group">
-      <input
-          ngModel
-          #email="ngModel"
-          class="form-control"
-          id="email"
-          name="email"
-          placeholder="email..."
-          type="email">
-      <label for="email">email</label>
-    </div>
+<hr>
 
-    <div class="form-group">
-      <input
-          ngModel
-          #firstName="ngModel"
-          class="form-control"
-          id="firstName"
-          name="firstName"
-          placeholder="first name..."
-          type="text">
-      <label for="firstName">first Name</label>
-    </div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
 
-    <div class="form-group">
-      <input
-          ngModel
-          #lastName="ngModel"
-          class="form-control"
-          id="lastName"
-          name="lastName"
-          placeholder="last name..."
-          type="text">
-      <label for="lastName">last Name</label>
-    </div>
+  <div #userData="ngModelGroup" ngModelGroup="user"></div>
 
-    <div>
-      <button class="btn btn-success" type="submit">Submit</button>
-      <button (click)="goBack()">back</button>
-    </div>
+  <div>
+    <input
+      #username="ngModel"
+      id="username"
+      name="username"
+      ngModel
+      placeholder="username..."
+      required
+      type="text">
+    <label for="username">username</label>
+  </div>
 
-  </form>
-</div>
+  <div>
+    <input
+      #email="ngModel"
+      class="form-control"
+      id="email"
+      name="email"
+      ngModel
+      placeholder="email..."
+      type="email">
+    <label for="email">email</label>
+  </div>
+
+  <div>
+    <input
+      #firstName="ngModel"
+      class="form-control"
+      id="firstName"
+      name="firstName"
+      ngModel
+      placeholder="first name..."
+      type="text">
+    <label for="firstName">first Name</label>
+  </div>
+
+  <div>
+    <input
+      #lastName="ngModel"
+      class="form-control"
+      id="lastName"
+      name="lastName"
+      ngModel
+      placeholder="last name..."
+      type="text">
+    <label for="lastName">last Name</label>
+  </div>
+
+  <div>
+    <button type="submit">Submit</button>
+    <button (click)="goBack()">back</button>
+  </div>
+
+</form>

@@ -1,22 +1,55 @@
+<h2>Update User</h2>
+
+<hr>
+
 <div *ngIf="user">
 
-  <form (ngSubmit)="onSubmit()" #f="ngForm">
-    <div ngModelGroup="userData" #userData="ngModelGroup">
+  <form #f="ngForm" (ngSubmit)="onSubmit()">
+
+    <div #userData="ngModelGroup" ngModelGroup="userData">
+
       <div>
+        <input
+          [(ngModel)]="user.username"
+          id="username"
+          name="username"
+          placeholder="username..."
+          required
+          type="text">
         <label for="username">username</label>
-        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
       </div>
+
       <div>
+        <input
+          [(ngModel)]="user.email"
+          id="email"
+          name="email"
+          required
+          placeholder="email..."
+          type="text">
         <label for="email">email</label>
-        <input type="text" id="email" [(ngModel)]="user.email" name="email" required>
       </div>
+
       <div>
+        <input
+          [(ngModel)]="user.firstName"
+          id="firstName"
+          name="username"
+          required
+          placeholder="first name..."
+          type="text">
         <label for="firstName">firstName</label>
-        <input type="text" id="firstName" [(ngModel)]="user.firstName" name="username" required>
       </div>
+
       <div>
+        <input
+          [(ngModel)]="user.lastName"
+          id="lastName"
+          name="lastName"
+          required
+          placeholder="last name..."
+          type="text">
         <label for="lastName">lastName</label>
-        <input type="text" id="lastName" [(ngModel)]="user.lastName" name="lastName" required>
       </div>
     </div>
 
