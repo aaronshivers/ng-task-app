@@ -19,7 +19,12 @@
         <input type="text" id="lastName" [(ngModel)]="user.lastName" name="lastName" required>
       </div>
     </div>
-    <button type="submit">update</button>
+
+    <div>
+      <button type="submit">update</button>
+      <button (click)="goBack()">back</button>
+    </div>
+
   </form>
 
 </div>
