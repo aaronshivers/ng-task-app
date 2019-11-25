@@ -1,4 +1,4 @@
 <li>
-  <span (click)="removeTask()" class="remove">X</span>
-  <a routerLink="/tasks/{{ task.id }}/view">{{ task.body }}</a>
+  <mat-icon (click)="removeTask()" class="remove">delete_forever</mat-icon>
+  <a [routerLink]="[task.id, 'view']">{{ task.body }}</a>
 </li>

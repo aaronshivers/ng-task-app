@@ -16,6 +16,8 @@ import { NewUserComponent } from './new-user/new-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { TitleComponent } from './title/title.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { NewTaskComponent } from './new-task/new-task.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [ AppComponent ],

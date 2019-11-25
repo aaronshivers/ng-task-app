@@ -1,8 +1,13 @@
 <form #f="ngForm" (ngSubmit)="onSubmit()">
 
   <div>
-    <button [ngClass]="{'invalid': f.invalid}" type="submit" [disabled]="f.invalid">Submit</button>
-    <button (click)="goBack()">back</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="f.invalid">Submit
+    </button>
+    <a role="button" mat-raised-button color="primary" (click)="goBack()">back</a>
   </div>
 
   <hr>

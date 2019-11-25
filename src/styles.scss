@@ -32,26 +32,6 @@ hr {
   border: 2px solid var(--primary-color);
 }
 
-button {
-  border: 5px solid var(--primary-color);
-  padding: 1rem;
-  width: 100%;
-  background-color: white;
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 1rem 0;
-}
-
-button:hover {
-  background-color: lighten(#296BB9, 40);
-}
-
-.invalid:hover {
-  background-color: rgb(240, 140, 151);
-}
-
 a, a:visited {
   text-decoration: none;
   cursor: pointer;
@@ -69,3 +49,6 @@ ul {
 ::placeholder {
   color: lighten(#296BB9, 30);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

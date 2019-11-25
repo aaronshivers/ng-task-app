@@ -5,34 +5,44 @@
 <div *ngIf="user">
   <table>
     <tr>
-      <td>id: </td>
+      <td>id:</td>
       <td>{{ user.id }}</td>
     </tr>
     <tr>
-      <td>username: </td>
+      <td>username:</td>
       <td>{{ user.username }}</td>
     </tr>
     <tr>
-      <td>email: </td>
+      <td>email:</td>
       <td>{{ user.email }}</td>
     </tr>
     <tr>
-      <td>first name: </td>
+      <td>first name:</td>
       <td>{{ user.firstName }}</td>
     </tr>
     <tr>
-      <td>last name: </td>
+      <td>last name:</td>
       <td>{{ user.lastName }}</td>
     </tr>
 
   </table>
 
   <div>
-    <a routerLink="/users/{{ user.id }}/update">
-      <button>update</button>
+    <a
+      role="button"
+      mat-raised-button
+      color="primary"
+      routerLink="/users/{{ user.id }}/update">
+      update
     </a>
-    <button (click)="deleteUser(user.id)">delete</button>
-    <button (click)="goBack()">back</button>
+    <button mat-raised-button color="primary" (click)="deleteUser(user.id)">
+      delete
+    </button>
+    <a
+      role="button"
+      mat-raised-button
+      color="primary"
+      (click)="goBack()">back</a>
   </div>
 
 </div>

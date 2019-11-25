@@ -1,8 +1,8 @@
 <form *ngIf="task" (ngSubmit)="onSubmit()" #f="ngForm">
 
   <div>
-    <button [ngClass]="{'invalid': f.invalid}" type="submit" [disabled]="f.invalid">add task</button>
-    <button (click)="goBack()">back</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">add task</button>
+    <a role="button" mat-raised-button color="primary" (click)="goBack()">back</a>
   </div>
 
   <hr>
