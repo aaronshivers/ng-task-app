@@ -1,5 +1,3 @@
-import { v4 as uuid } from 'uuid';
-
 import { Injectable } from '@angular/core';
 import { TASKS } from './tasks';
 import { Task } from './task';
@@ -16,8 +14,7 @@ export class TaskService {
     return this.tasks;
   }
 
-  addTask(value: string): void {
-    const task = new Task(uuid(), value);
+  saveTask(task: Task): void {
     this.tasks.push(task);
   }
 

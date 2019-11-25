@@ -1,6 +1,9 @@
+import { v4 as uuid } from 'uuid';
+
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../task.service';
 import { Location } from '@angular/common';
+import { Task } from '../task';
 
 @Component({
   selector: 'app-new-task',
@@ -8,6 +11,7 @@ import { Location } from '@angular/common';
   styleUrls: [ './new-task.component.scss' ],
 })
 export class NewTaskComponent implements OnInit {
+  task: Task;
 
   constructor(private taskService: TaskService, private location: Location) {
   }
@@ -15,16 +19,21 @@ export class NewTaskComponent implements OnInit {
   ngOnInit() {
   }
 
-  addTask(value: string): void {
-    this.taskService.addTask(value);
+  createTask(): void {
+    this.task = new Task(uuid(), this.task.body);
+  }
+
+  saveTask(): void {
+    this.taskService.saveTask(this.task);
   }
 
   goBack(): void {
     this.location.back();
   }
 
-  onSubmit(value: string): void {
-    this.addTask(value);
+  onSubmit(): void {
+    this.createTask();
+    this.saveTask();
     this.goBack();
   }
 }

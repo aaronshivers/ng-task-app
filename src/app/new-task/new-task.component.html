@@ -1,7 +1,7 @@
-<form (ngSubmit)="onSubmit(f.value.body)" #f="ngForm">
+<form *ngIf="task" (ngSubmit)="onSubmit()" #f="ngForm">
 
   <div>
-    <button type="submit">add task</button>
+    <button type="submit" [disabled]="f.invalid">add task</button>
     <button (click)="goBack()">back</button>
   </div>
 
@@ -12,8 +12,8 @@
   <hr>
 
   <div>
-    <input ngModel #body="ngModel" name="body" type="text" placeholder="new task..." required id="newTask">
-    <label for="newTask">new task</label>
+    <input [(ngModel)]="task.body" #body="ngModel" name="body" type="text" placeholder="new task..." required id="body">
+    <label for="body">new task</label>
   </div>
 
 </form>
