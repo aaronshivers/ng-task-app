@@ -14,6 +14,7 @@ export class UpdateUserComponent implements OnInit {
   @ViewChild('f', { static: false }) updateUserForm: NgForm;
   user: User;
   id: number = +this.route.snapshot.paramMap.get('id');
+  subtitle = 'update user';
 
   constructor(
     private location: Location,

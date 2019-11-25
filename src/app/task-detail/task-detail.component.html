@@ -1,5 +1,4 @@
 <div>
-  <a role="button" mat-raised-button color="primary" (click)="goBack()">update</a>
   <a role="button" mat-raised-button color="primary" (click)="goBack()">Back</a>
 </div>
 
@@ -7,13 +6,22 @@
 
 <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-<!--todo: convert to a form-->
-<input
-  *ngIf="task"
-  [(ngModel)]="task.body"
-  value="{{ task.body }}"
-  class="task-detail__input"
-  placeholder="updated task..."
-  maxlength="25"
-  type="text">
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <input
+      matInput
+      *ngIf="task"
+      [(ngModel)]="task.body"
+      value="{{ task.body }}"
+      maxlength="25"
+      name="task"
+      type="text">
+    <mat-label>task</mat-label>
+  </mat-form-field>
+
+  <button [disabled]="f.invalid" mat-raised-button color="primary" type="submit">update</button>
+</form>
+
+
 

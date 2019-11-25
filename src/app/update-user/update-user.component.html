@@ -1,6 +1,4 @@
-<h2>Update User</h2>
-
-<hr>
+<app-subtitle [subtitle]="subtitle"></app-subtitle>
 
 <div *ngIf="user">
 
@@ -8,49 +6,53 @@
 
     <div #userData="ngModelGroup" ngModelGroup="userData">
 
-      <div>
+      <mat-form-field>
         <input
+          matInput
           [(ngModel)]="user.username"
           id="username"
           name="username"
           placeholder="username..."
           required
           type="text">
-        <label for="username">username</label>
-      </div>
+        <mat-label>username</mat-label>
+      </mat-form-field>
 
-      <div>
+      <mat-form-field>
         <input
+          matInput
           [(ngModel)]="user.email"
           id="email"
           name="email"
           required
           placeholder="email..."
           type="text">
-        <label for="email">email</label>
-      </div>
+        <mat-label>email</mat-label>
+      </mat-form-field>
 
-      <div>
+      <mat-form-field>
         <input
+          matInput
           [(ngModel)]="user.firstName"
           id="firstName"
           name="username"
           required
           placeholder="first name..."
           type="text">
-        <label for="firstName">firstName</label>
-      </div>
+        <mat-label>first name</mat-label>
+      </mat-form-field>
 
-      <div>
+      <mat-form-field>
         <input
+          matInput
           [(ngModel)]="user.lastName"
           id="lastName"
           name="lastName"
           required
           placeholder="last name..."
           type="text">
-        <label for="lastName">lastName</label>
-      </div>
+        <mat-label>last name</mat-label>
+      </mat-form-field>
     </div>
 
     <div>

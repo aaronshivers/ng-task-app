@@ -9,9 +9,9 @@
 
   <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-  <div>
-    <input [(ngModel)]="task.body" #body="ngModel" name="body" type="text" placeholder="new task..." required id="body">
-    <label for="body">new task</label>
-  </div>
+  <mat-form-field>
+    <input matInput [(ngModel)]="task.body" #body="ngModel" name="body" type="text" placeholder="new task..." required id="body">
+    <label>new task</label>
+  </mat-form-field>
 
 </form>

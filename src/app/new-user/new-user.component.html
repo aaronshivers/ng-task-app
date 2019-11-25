@@ -14,8 +14,9 @@
 
   <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-  <div>
+  <mat-form-field>
     <input
+      matInput
       #username="ngModel"
       id="username"
       name="username"
@@ -23,11 +24,12 @@
       placeholder="username..."
       required
       type="text">
-    <label for="username">username</label>
-  </div>
+    <mat-label>username</mat-label>
+  </mat-form-field>
 
-  <div>
+  <mat-form-field>
     <input
+      matInput
       #email="ngModel"
       class="form-control"
       id="email"
@@ -36,11 +38,12 @@
       placeholder="email..."
       required
       type="email">
-    <label for="email">email</label>
-  </div>
+    <mat-label>email</mat-label>
+  </mat-form-field>
 
-  <div>
+  <mat-form-field>
     <input
+      matInput
       #firstName="ngModel"
       class="form-control"
       id="firstName"
@@ -50,10 +53,11 @@
       required
       type="text">
     <label for="firstName">first Name</label>
-  </div>
+  </mat-form-field>
 
-  <div>
+  <mat-form-field>
     <input
+      matInput
       #lastName="ngModel"
       class="form-control"
       id="lastName"
@@ -63,6 +67,6 @@
       required
       type="text">
     <label for="lastName">last Name</label>
-  </div>
+  </mat-form-field>
 
 </form>
