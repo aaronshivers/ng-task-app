@@ -39,6 +39,9 @@ button {
 button:hover {
   background-color: #bed5f0; }
 
+.invalid:hover {
+  background-color: #f08c97; }
+
 a, a:visited {
   text-decoration: none;
   cursor: pointer;

@@ -17,10 +17,11 @@ export class NewTaskComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.task = new Task('', '');
   }
 
-  createTask(): void {
-    this.task = new Task(uuid(), this.task.body);
+  setTaskId(): void {
+    this.task.id = uuid();
   }
 
   saveTask(): void {
@@ -32,7 +33,7 @@ export class NewTaskComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.createTask();
+    this.setTaskId();
     this.saveTask();
     this.goBack();
   }

@@ -48,6 +48,10 @@ button:hover {
   background-color: lighten(#296BB9, 40);
 }
 
+.invalid:hover {
+  background-color: rgb(240, 140, 151);
+}
+
 a, a:visited {
   text-decoration: none;
   cursor: pointer;

@@ -1,7 +1,7 @@
 <form *ngIf="task" (ngSubmit)="onSubmit()" #f="ngForm">
 
   <div>
-    <button type="submit" [disabled]="f.invalid">add task</button>
+    <button [ngClass]="{'invalid': f.invalid}" type="submit" [disabled]="f.invalid">add task</button>
     <button (click)="goBack()">back</button>
   </div>
 

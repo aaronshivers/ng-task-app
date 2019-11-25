@@ -1,7 +1,7 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+<form #f="ngForm" (ngSubmit)="onSubmit()">
 
   <div>
-    <button type="submit">Submit</button>
+    <button [ngClass]="{'invalid': f.invalid}" type="submit" [disabled]="f.invalid">Submit</button>
     <button (click)="goBack()">back</button>
   </div>
 
@@ -11,14 +11,12 @@
 
   <hr>
 
-  <div #userData="ngModelGroup" ngModelGroup="user"></div>
-
   <div>
     <input
       #username="ngModel"
       id="username"
       name="username"
-      ngModel
+      [(ngModel)]="user.username"
       placeholder="username..."
       required
       type="text">
@@ -31,8 +29,9 @@
       class="form-control"
       id="email"
       name="email"
-      ngModel
+      [(ngModel)]="user.email"
       placeholder="email..."
+      required
       type="email">
     <label for="email">email</label>
   </div>
@@ -43,8 +42,9 @@
       class="form-control"
       id="firstName"
       name="firstName"
-      ngModel
+      [(ngModel)]="user.firstName"
       placeholder="first name..."
+      required
       type="text">
     <label for="firstName">first Name</label>
   </div>
@@ -55,8 +55,9 @@
       class="form-control"
       id="lastName"
       name="lastName"
-      ngModel
+      [(ngModel)]="user.lastName"
       placeholder="last name..."
+      required
       type="text">
     <label for="lastName">last Name</label>
   </div>

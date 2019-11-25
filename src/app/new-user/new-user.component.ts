@@ -17,19 +17,19 @@ export class NewUserComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.user = new User('', '', '', '');
   }
 
-  addUser(user: User): void {
+  addUser(): void {
     this
       .userService
-      .addUser(user)
+      .addUser(this.user)
       .subscribe();
   }
 
-  onSubmit(value: User): void {
-    this.addUser(value);
-    // todo: make goBack() run after adding user is completed
-    setTimeout(() => this.goBack(), 1000);
+  onSubmit(): void {
+    this.addUser();
+    this.goBack();
   }
 
   goBack(): void {
