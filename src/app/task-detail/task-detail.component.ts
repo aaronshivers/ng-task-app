@@ -11,6 +11,7 @@ import { TaskService } from '../task.service';
 })
 export class TaskDetailComponent implements OnInit {
   task: Task;
+  subtitle = 'update task';
 
   constructor(
     private route: ActivatedRoute,

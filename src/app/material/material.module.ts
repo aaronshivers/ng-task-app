@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 const MaterialComponents = [
   MatButtonModule,
-  MatIconModule
+  MatIconModule,
 ];
 
 @NgModule({

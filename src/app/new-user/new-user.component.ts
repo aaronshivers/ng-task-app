@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 })
 export class NewUserComponent implements OnInit {
   user: User;
+  subtitle: string;
 
   constructor(
     private userService: UserService,
@@ -17,6 +18,7 @@ export class NewUserComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.subtitle = 'new user';
     this.user = new User('', '', '', '');
   }
 

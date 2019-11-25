@@ -18,6 +18,7 @@ import { TitleComponent } from './title/title.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { SubtitleComponent } from './subtitle/subtitle.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MaterialModule } from './material/material.module';
     UpdateUserComponent,
     TitleComponent,
     NewTaskComponent,
+    SubtitleComponent,
   ],
   imports: [
     BrowserModule,

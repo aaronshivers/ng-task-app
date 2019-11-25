@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 
 :root {
   --primary-color: #296bb9;
@@ -12,10 +12,7 @@
 }
 
 html {
-  font-size: 16px;
-  color: var(--primary-color);
-  font-weight: 700;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -25,7 +22,6 @@ body {
 
 h2 {
   text-align: center;
-  text-transform: uppercase;
 }
 
 hr {
@@ -35,11 +31,6 @@ hr {
 a, a:visited {
   text-decoration: none;
   cursor: pointer;
-  color: inherit;
-}
-
-a:hover {
-  color: darken(#296BB9, 30);
 }
 
 ul {

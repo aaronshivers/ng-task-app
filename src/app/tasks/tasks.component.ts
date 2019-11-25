@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 })
 export class TasksComponent {
   tasks: Task[];
+  subtitle = 'tasks';
 
   constructor(public taskService: TaskService, private location: Location) {
   }

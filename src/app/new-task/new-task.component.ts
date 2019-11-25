@@ -12,6 +12,7 @@ import { Task } from '../task';
 })
 export class NewTaskComponent implements OnInit {
   task: Task;
+  subtitle = 'new task';
 
   constructor(private taskService: TaskService, private location: Location) {
   }

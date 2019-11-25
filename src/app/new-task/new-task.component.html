@@ -7,9 +7,7 @@
 
   <hr>
 
-  <h2>New Task</h2>
-
-  <hr>
+  <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
   <div>
     <input [(ngModel)]="task.body" #body="ngModel" name="body" type="text" placeholder="new task..." required id="body">

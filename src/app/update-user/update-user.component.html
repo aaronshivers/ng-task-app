@@ -54,8 +54,8 @@
     </div>
 
     <div>
-      <button [ngClass]="{'invalid': f.invalid}" type="submit" [disabled]="f.invalid">update</button>
-      <button (click)="goBack()">back</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">update</button>
+      <a role="button" mat-raised-button color="primary" (click)="goBack()">back</a>
     </div>
 
   </form>

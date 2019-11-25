@@ -7,12 +7,11 @@
 
 <hr>
 
-<h2>users</h2>
+<app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-<hr>
 
 <ul *ngFor="let user of users">
   <li>
-    <a routerLink="/users/{{ user.id }}/view/">{{ user.username }}</a>
+    <a [routerLink]="[user.id, 'view']">{{ user.username }}</a>
   </li>
 </ul>
