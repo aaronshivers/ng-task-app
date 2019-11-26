@@ -11,13 +11,14 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Roboto', sans-serif;
+html, body {
+  height: 100%;
+  max-width: 768px;
 }
 
 body {
-  margin: 0 auto;
-  max-width: 768px;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 h2 {
@@ -41,5 +42,6 @@ ul {
   color: lighten(#296BB9, 30);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container {
+  padding: 1rem;
+}

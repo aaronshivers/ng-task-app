@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(~normalize.css);
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap");
 :root {
   --primary-color: #296bb9;
   --secondary-color: #b9172d; }
@@ -8,52 +8,31 @@
 * {
   box-sizing: border-box; }
 
-html {
-  font-size: 16px;
-  color: var(--primary-color);
-  font-weight: 700;
-  font-family: 'Ubuntu', sans-serif; }
-
-body {
-  margin: 0 auto;
+html, body {
+  height: 100%;
   max-width: 768px; }
 
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 h2 {
-  text-align: center;
-  text-transform: uppercase; }
+  text-align: center; }
 
 hr {
   border: 2px solid var(--primary-color); }
 
-button {
-  border: 5px solid var(--primary-color);
-  padding: 1rem;
-  width: 100%;
-  background-color: white;
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 1rem 0; }
-
-button:hover {
-  background-color: #bed5f0; }
-
-.invalid:hover {
-  background-color: #f08c97; }
-
 a, a:visited {
   text-decoration: none;
-  cursor: pointer;
-  color: inherit; }
-
-a:hover {
-  color: #0d233c; }
+  cursor: pointer; }
 
 ul {
   padding: 0; }
 
 ::placeholder {
   color: #94bae7; }
+
+.container {
+  padding: 1rem; }
 
 /*# sourceMappingURL=styles.css.map */

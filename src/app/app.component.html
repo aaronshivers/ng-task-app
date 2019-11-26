@@ -1,17 +1,1 @@
-<div class="app__container">
-
-  <app-title></app-title>
-
-  <div *ngIf="!isLoggedIn; then displayApp else displayLogin"></div>
-
-  <ng-template #displayLogin>
-    <app-login></app-login>
-  </ng-template>
-
-  <ng-template #displayApp>
-    <router-outlet></router-outlet>
-  </ng-template>
-
-</div>
-
-
+<app-sidenav></app-sidenav>
