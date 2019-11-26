@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 export class UsersComponent implements OnInit {
   users: User[];
   subtitle: string;
+  displayedColumns: string[] = ['id', 'username', 'email', 'firstName', 'lastName'];
 
   constructor(public userService: UserService, public location: Location) {
   }

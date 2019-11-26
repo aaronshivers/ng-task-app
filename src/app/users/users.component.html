@@ -9,9 +9,34 @@
 
 <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
+<table *ngIf="users" mat-table [dataSource]="users" class="mat-elevation-z8">
 
-<mat-list>
-  <mat-list-item *ngFor="let user of users">
-    <a mat-line [routerLink]="[user.id, 'view']">{{ user.username }}</a>
-  </mat-list-item>
-</mat-list>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id: </th>
+    <td mat-cell *matCellDef="let user"> {{ user.id }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef> Username: </th>
+    <td mat-cell *matCellDef="let user"> {{ user.username }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email: </th>
+    <td mat-cell *matCellDef="let user"> {{ user.email }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> First Name: </th>
+    <td mat-cell *matCellDef="let user"> {{ user.first_name }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Last Name: </th>
+    <td mat-cell *matCellDef="let user"> {{ user.last_name }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+</table>
