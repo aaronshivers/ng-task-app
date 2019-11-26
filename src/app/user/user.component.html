@@ -1,7 +1,7 @@
 <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-<div *ngIf="user">
-  <table>
+<mat-card>
+  <table *ngIf="user">
     <tr>
       <td>id:</td>
       <td>{{ user.id }}</td>
@@ -24,23 +24,23 @@
     </tr>
 
   </table>
+</mat-card>
 
-  <div>
-    <a
-      role="button"
-      mat-raised-button
-      color="primary"
-      routerLink="/users/{{ user.id }}/update">
-      update
-    </a>
-    <button mat-raised-button color="primary" (click)="deleteUser(user.id)">
-      delete
-    </button>
-    <a
-      role="button"
-      mat-raised-button
-      color="primary"
-      (click)="goBack()">back</a>
-  </div>
-
+<div>
+  <a
+    role="button"
+    mat-raised-button
+    color="primary"
+    routerLink="/users/{{ user.id }}/update">
+    update
+  </a>
+  <button mat-raised-button color="primary" (click)="deleteUser(user.id)">
+    delete
+  </button>
+  <a
+    role="button"
+    mat-raised-button
+    color="primary"
+    (click)="goBack()">back</a>
 </div>
+
