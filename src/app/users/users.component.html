@@ -10,8 +10,8 @@
 <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
 
-<ul *ngFor="let user of users">
-  <li>
-    <a [routerLink]="[user.id, 'view']">{{ user.username }}</a>
-  </li>
-</ul>
+<mat-list>
+  <mat-list-item *ngFor="let user of users">
+    <a mat-line [routerLink]="[user.id, 'view']">{{ user.username }}</a>
+  </mat-list-item>
+</mat-list>

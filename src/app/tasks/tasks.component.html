@@ -1,5 +1,6 @@
 <div>
-  <a role="button" mat-raised-button color="primary" routerLink="/tasks/new">new task</a>
+  <a role="button" mat-raised-button color="primary" routerLink="/tasks/new">new
+    task</a>
   <button mat-raised-button color="primary" (click)="goBack()">back</button>
 </div>
 
@@ -7,6 +8,8 @@
 
 <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-<ul *ngFor="let task of taskService.getTasks()">
-  <app-task [task]="task"></app-task>
-</ul>
+<mat-list>
+  <app-task
+    *ngFor="let task of taskService.getTasks()"
+    [task]="task"></app-task>
+</mat-list>

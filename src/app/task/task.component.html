@@ -1,4 +1,7 @@
-<li>
-  <mat-icon (click)="removeTask()" class="remove">delete_forever</mat-icon>
-  <a [routerLink]="[task.id, 'view']">{{ task.body }}</a>
-</li>
+<mat-list-item>
+  <a mat-line [routerLink]="[task.id, 'view']">{{ task.body }}</a>
+  <button mat-icon-button (click)="removeTask()" class="remove">
+    <mat-icon color="warn">delete_forever</mat-icon>
+  </button>
+</mat-list-item>
+

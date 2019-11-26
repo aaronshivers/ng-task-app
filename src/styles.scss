@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 
 :root {
-  --primary-color: #296bb9;
+  --primary-color: #3f51b5;
   --secondary-color: #b9172d;
 }
 
@@ -13,12 +13,12 @@
 
 html, body {
   height: 100%;
-  max-width: 768px;
 }
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  max-width: 768px;
 }
 
 h2 {
@@ -29,18 +29,14 @@ hr {
   border: 2px solid var(--primary-color);
 }
 
-a, a:visited {
-  text-decoration: none;
-  cursor: pointer;
-}
+//a, a:visited {
+//  text-decoration: none;
+//  cursor: pointer;
+//}
 
-ul {
-  padding: 0;
-}
-
-::placeholder {
-  color: lighten(#296BB9, 30);
-}
+//::placeholder {
+//  color: lighten(#296BB9, 30);
+//}
 
 .container {
   padding: 1rem;

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { User } from '../user';
 import { Location } from '@angular/common';
 import { UserService } from '../user.service';
@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 })
 export class UpdateUserComponent implements OnInit {
   @ViewChild('f', { static: false }) updateUserForm: NgForm;
-  user: User;
+  @Output() user: User;
   id: number = +this.route.snapshot.paramMap.get('id');
   subtitle = 'update user';
 
