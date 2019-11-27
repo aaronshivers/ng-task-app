@@ -28,13 +28,18 @@
 
 <div>
   <a
+    *ngIf="user"
     role="button"
     mat-raised-button
     color="primary"
     routerLink="/users/{{ user.id }}/update">
     update
   </a>
-  <button mat-raised-button color="primary" (click)="deleteUser(user.id)">
+  <button
+    *ngIf="user"
+    mat-raised-button
+    color="primary"
+    (click)="deleteUser(user.id)">
     delete
   </button>
   <a
