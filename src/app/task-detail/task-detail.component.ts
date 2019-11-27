@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Task } from '../task';
 import { TaskService } from '../task.service';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-task-detail',
@@ -12,20 +13,22 @@ import { TaskService } from '../task.service';
 export class TaskDetailComponent implements OnInit {
   task: Task;
   subtitle = 'update task';
+  taskId: string;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private taskService: TaskService,
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) { }
 
   ngOnInit() {
+    this.taskId = this.data;
     this.getTask();
   }
 
   getTask(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.task = this.taskService.getTask(id);
+    this.task = this.taskService.getTask(this.taskId);
   }
 
   goBack(): void {
@@ -38,6 +41,5 @@ export class TaskDetailComponent implements OnInit {
 
   onSubmit(): void {
     this.updateTask();
-    this.goBack();
   }
 }

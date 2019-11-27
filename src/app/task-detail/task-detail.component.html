@@ -1,27 +1,24 @@
-<div>
-  <a role="button" mat-raised-button color="primary" (click)="goBack()">Back</a>
-</div>
-
-<hr>
-
 <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-<form #f="ngForm" (ngSubmit)="onSubmit()">
+<mat-dialog-content>
+  <form *ngIf="task" #f="ngForm" (ngSubmit)="onSubmit()">
 
-  <mat-form-field>
-    <input
-      matInput
-      *ngIf="task"
-      [(ngModel)]="task.body"
-      value="{{ task.body }}"
-      maxlength="25"
-      name="task"
-      type="text">
-    <mat-label>task</mat-label>
-  </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="task.body"
+        value="{{ task.body }}"
+        maxlength="25"
+        name="task"
+        type="text">
+      <mat-label>task</mat-label>
+    </mat-form-field>
 
-  <button [disabled]="f.invalid" mat-raised-button color="primary" type="submit">update</button>
-</form>
+  </form>
+</mat-dialog-content>
 
+<mat-dialog-actions>
+  <button color="primary" mat-raised-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
 
 

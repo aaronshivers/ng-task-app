@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from '../task';
 import { TaskService } from '../task.service';
 import { Location } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { TaskDetailComponent } from '../task-detail/task-detail.component';
 
 @Component({
   selector: 'app-tasks',
@@ -14,7 +16,11 @@ export class TasksComponent implements OnInit {
   subtitle = 'tasks';
   displayedColumns: string[] = [ 'id', 'body', 'actions' ];
 
-  constructor(public taskService: TaskService, private location: Location) {
+  constructor(
+    public taskService: TaskService,
+    private location: Location,
+    public dialog: MatDialog,
+  ) {
   }
 
   ngOnInit(): void {
@@ -32,5 +38,9 @@ export class TasksComponent implements OnInit {
   deleteTask(id: any): void {
     this.taskService.deleteTask(id);
     this.getTasks();
+  }
+
+  updateTask(id: string): void {
+    this.dialog.open(TaskDetailComponent, { data: id });
   }
 }

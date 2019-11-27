@@ -26,10 +26,10 @@
       <button (click)="deleteTask(task.id)" mat-icon-button>
         <mat-icon>delete_forever</mat-icon>
       </button>
-      <button mat-icon-button [routerLink]="[task.id, 'view']">
+      <button disabled mat-icon-button [routerLink]="[task.id, 'view']">
         <mat-icon>search</mat-icon>
       </button>
-      <button disabled mat-icon-button [routerLink]="[task.id, 'update']">
+      <button mat-icon-button (click)="updateTask(task.id)">
         <mat-icon>build</mat-icon>
       </button>
     </td>
