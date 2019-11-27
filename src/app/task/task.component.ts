@@ -16,6 +16,6 @@ export class TaskComponent implements OnInit {
   }
 
   removeTask() {
-    this.taskService.removeTask(this.task.id);
+    this.taskService.deleteTask(this.task.id);
   }
 }

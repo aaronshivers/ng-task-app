@@ -20,6 +20,21 @@
     <td mat-cell *matCellDef="let task"> {{ task.body }} </td>
   </ng-container>
 
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions: </th>
+    <td mat-cell *matCellDef="let task">
+      <button (click)="deleteTask(task.id)" mat-icon-button>
+        <mat-icon>delete_forever</mat-icon>
+      </button>
+      <button mat-icon-button [routerLink]="[task.id, 'view']">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button disabled mat-icon-button [routerLink]="[task.id, 'update']">
+        <mat-icon>build</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 

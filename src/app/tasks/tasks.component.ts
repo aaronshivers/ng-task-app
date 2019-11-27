@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 export class TasksComponent implements OnInit {
   tasks: Task[];
   subtitle = 'tasks';
-  displayedColumns: string[] = [ 'id', 'body' ];
+  displayedColumns: string[] = [ 'id', 'body', 'actions' ];
 
   constructor(public taskService: TaskService, private location: Location) {
   }
@@ -27,5 +27,9 @@ export class TasksComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  deleteTask(id: any): void {
+    this.taskService.deleteTask(id);
   }
 }
