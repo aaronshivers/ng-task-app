@@ -31,7 +31,7 @@ export class NewUserComponent implements OnInit {
 
   onSubmit(): void {
     this.addUser();
-    this.goBack();
+    setTimeout(() => this.goBack(), 1000);
   }
 
   goBack(): void {
