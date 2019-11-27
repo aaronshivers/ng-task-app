@@ -31,5 +31,6 @@ export class TasksComponent implements OnInit {
 
   deleteTask(id: any): void {
     this.taskService.deleteTask(id);
+    this.getTasks();
   }
 }
