@@ -57,9 +57,12 @@
 
     <div>
       <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">update</button>
-      <a role="button" mat-raised-button color="primary" (click)="goBack()">back</a>
     </div>
 
   </form>
 
 </div>
+
+<mat-dialog-actions>
+  <button color="primary" mat-raised-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

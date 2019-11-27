@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
 import { Location } from '@angular/common';
+import { UserComponent } from '../user/user.component';
+import { MatDialog } from '@angular/material/dialog';
+import { UpdateUserComponent } from '../update-user/update-user.component';
 
 @Component({
   selector: 'app-users',
@@ -12,9 +15,13 @@ import { Location } from '@angular/common';
 export class UsersComponent implements OnInit {
   users: User[];
   subtitle: string;
-  displayedColumns: string[] = ['id', 'username', 'email', 'firstName', 'lastName', 'actions'];
+  displayedColumns: string[] = [ 'id', 'username', 'email', 'firstName', 'lastName', 'actions' ];
 
-  constructor(public userService: UserService, public location: Location) {
+  constructor(
+    public userService: UserService,
+    public location: Location,
+    public dialog: MatDialog,
+  ) {
   }
 
   ngOnInit() {
@@ -37,5 +44,17 @@ export class UsersComponent implements OnInit {
 
   deleteUser(id: number) {
     this.userService.deleteUser(id).subscribe(() => this.getUsers());
+  }
+
+  viewUser(id: number): void {
+    const dialogRef = this.dialog.open(UserComponent, {
+      data: id,
+    });
+
+    dialogRef.afterClosed().subscribe(() => this.getUsers());
+  }
+
+  updateUser(id: number): void {
+    this.dialog.open(UpdateUserComponent, { data: id });
   }
 }

@@ -47,6 +47,7 @@ import { MatSortModule } from '@angular/material/sort';
     SubtitleComponent,
     SidenavComponent,
   ],
+  entryComponents: [ UserComponent, UpdateUserComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

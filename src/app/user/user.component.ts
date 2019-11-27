@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { ActivatedRoute } from '@angular/router';
 import { User } from '../user';
-import { Location } from '@angular/common';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user',
@@ -10,25 +9,25 @@ import { Location } from '@angular/common';
   styleUrls: [ './user.component.scss' ],
 })
 export class UserComponent implements OnInit {
+  userId: number;
   user: User;
   subtitle = 'user detail';
 
   constructor(
     private userService: UserService,
-    private location: Location,
-    private route: ActivatedRoute,
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
   }
 
   ngOnInit() {
+    this.userId = this.data;
     this.getUser();
   }
 
   getUser(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
     this
       .userService
-      .getUser(id)
+      .getUser(this.userId)
       // @ts-ignore
       // tslint:disable-next-line:no-shadowed-variable
       .subscribe(({ id, username, email, first_name: firstName, last_name: lastName }) => {
@@ -36,13 +35,7 @@ export class UserComponent implements OnInit {
       });
   }
 
-  deleteUser(id: number): void {
-    this.userService.deleteUser(id).subscribe();
-    // todo: get the users list to automatically refresh after deleting a user
-    setTimeout(() => this.goBack(), 1000);
-  }
-
-  goBack(): void {
-    this.location.back();
+  deleteUser(): void {
+    this.userService.deleteUser(this.userId).subscribe();
   }
 }

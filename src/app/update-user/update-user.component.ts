@@ -1,9 +1,9 @@
-import { Component, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, Output, ViewChild } from '@angular/core';
 import { User } from '../user';
 import { Location } from '@angular/common';
 import { UserService } from '../user.service';
-import { ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-update-user',
@@ -13,24 +13,25 @@ import { NgForm } from '@angular/forms';
 export class UpdateUserComponent implements OnInit {
   @ViewChild('f', { static: false }) updateUserForm: NgForm;
   @Output() user: User;
-  id: number = +this.route.snapshot.paramMap.get('id');
+  userId: number;
   subtitle = 'update user';
 
   constructor(
     private location: Location,
     private userService: UserService,
-    private route: ActivatedRoute,
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
   }
 
   ngOnInit() {
+    this.userId = this.data;
     this.getUser();
   }
 
   getUser(): void {
     this
       .userService
-      .getUser(this.id)
+      .getUser(this.userId)
       // @ts-ignore
       // tslint:disable-next-line:no-shadowed-variable
       .subscribe(({ id, username, email, first_name: firstName, last_name: lastName }) => {
@@ -39,15 +40,10 @@ export class UpdateUserComponent implements OnInit {
   }
 
   updateUser(): void {
-    this.userService.updateUser(this.id, this.user).subscribe();
+    this.userService.updateUser(this.userId, this.user).subscribe();
   }
 
   onSubmit(): void {
     this.updateUser();
-    setTimeout(() => this.goBack(), 1000);
-  }
-
-  goBack(): void {
-    this.location.back();
   }
 }
