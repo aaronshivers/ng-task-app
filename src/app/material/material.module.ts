@@ -6,8 +6,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
 
 const MaterialComponents = [
+  MatBadgeModule,
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,

@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-title>
     <mat-icon>people</mat-icon>
-    Users
+    <span matBadge="{{ userCount }}" matBadgeOverlap="false">Users</span>
   </mat-card-title>
   <mat-card-actions>
     <a role="button" color="primary" mat-raised-button routerLink="users">View Users</a>
@@ -11,7 +11,7 @@
 <mat-card>
   <mat-card-title>
     <mat-icon>how_to_vote</mat-icon>
-    Tasks
+    <span matBadge="{{ taskCount }}" matBadgeOverlap="false">Tasks</span>
   </mat-card-title>
   <mat-card-actions>
     <a role="button" color="primary" mat-raised-button routerLink="tasks">View Tasks</a>
