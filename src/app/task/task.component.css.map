@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,EAAG;EACD,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;;AAGhC,OAAQ;EACN,KAAK,EAAE,sBAAsB;EAC7B,MAAM,EAAE,OAAO;;AAGjB,aAAc;EACZ,KAAK,EAAE,OAAmB",
-"sources": ["task.component.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "task.component.css"
 }
