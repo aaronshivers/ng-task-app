@@ -1,8 +1,19 @@
-<div class="buttons">
-  <a routerLink="users">
-    <button color="primary" mat-raised-button>users</button>
-  </a>
-  <a routerLink="tasks">
-    <button color="primary" mat-raised-button>tasks</button>
-  </a>
-</div>
+<mat-card>
+  <mat-card-title>
+    <mat-icon>people</mat-icon>
+    Users
+  </mat-card-title>
+  <mat-card-actions>
+    <a role="button" color="primary" mat-raised-button routerLink="users">View Users</a>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>
+    <mat-icon>how_to_vote</mat-icon>
+    Tasks
+  </mat-card-title>
+  <mat-card-actions>
+    <a role="button" color="primary" mat-raised-button routerLink="tasks">View Tasks</a>
+  </mat-card-actions>
+</mat-card>
