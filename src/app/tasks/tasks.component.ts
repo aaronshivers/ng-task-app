@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Task } from '../task';
 import { TaskService } from '../task.service';
@@ -9,11 +9,20 @@ import { Location } from '@angular/common';
   templateUrl: './tasks.component.html',
   styleUrls: [ './tasks.component.scss' ],
 })
-export class TasksComponent {
+export class TasksComponent implements OnInit {
   tasks: Task[];
   subtitle = 'tasks';
+  displayedColumns: string[] = [ 'id', 'body' ];
 
   constructor(public taskService: TaskService, private location: Location) {
+  }
+
+  ngOnInit(): void {
+    this.getTasks();
+  }
+
+  getTasks() {
+    this.tasks = this.taskService.getTasks();
   }
 
   goBack(): void {

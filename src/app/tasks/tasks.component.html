@@ -8,8 +8,19 @@
 
 <app-subtitle [subtitle]="subtitle"></app-subtitle>
 
-<mat-list>
-  <app-task
-    *ngFor="let task of taskService.getTasks()"
-    [task]="task"></app-task>
-</mat-list>
+<table *ngIf="tasks" mat-table [dataSource]="tasks" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id: </th>
+    <td mat-cell *matCellDef="let task"> {{ task.id }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="body">
+    <th mat-header-cell *matHeaderCellDef> Body: </th>
+    <td mat-cell *matCellDef="let task"> {{ task.body }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+</table>
