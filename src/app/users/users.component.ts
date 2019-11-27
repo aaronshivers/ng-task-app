@@ -34,4 +34,8 @@ export class UsersComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  deleteUser(id: number) {
+    this.userService.deleteUser(id).subscribe();
+  }
 }
