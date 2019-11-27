@@ -43,10 +43,10 @@
         <mat-icon>delete_forever</mat-icon>
       </button>
       <button mat-icon-button>
-        <mat-icon>search</mat-icon>
+        <mat-icon [routerLink]="[user.id, 'view']">search</mat-icon>
       </button>
       <button mat-icon-button>
-        <mat-icon>build</mat-icon>
+        <mat-icon [routerLink]="[user.id, 'update']">build</mat-icon>
       </button>
     </td>
   </ng-container>
